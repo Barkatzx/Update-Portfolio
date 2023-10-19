@@ -63,7 +63,7 @@
 .loading_coral {
   left: 0px;
   bottom: 0px;
-  border-top: 5px #fd5857 solid;
+  border-top: 5px #4db5ff solid;
   animation: coral_animation 1.5s infinite;
 }
 
@@ -72,11 +72,11 @@
   content: "";
   width: 10px;
   height: 10px;
-  background: #fd5857;
+  background: #4db5ff;
   border-radius: 69%;
   right: 5px;
   top: 10px;
-  box-shadow: 0px 0px 20px #fd5857;
+  box-shadow: 0px 0px 20px #4db5ff;
 }
 
 .loading_coral:before {
@@ -84,7 +84,7 @@
   width: 5px;
   height: 5px;
   position: absolute;
-  background: #fd5857;
+  background: #4db5ff;
   top: 8.8px;
   left: 9px;
   border-radius: 69%;
@@ -93,7 +93,7 @@
 .loading_orange {
   right: 0px;
   bottom: 0px;
-  border-top: 5px #f79d41 solid;
+  border-top: 5px #4db5ff solid;
   animation: orange_animation 1.5s infinite;
 }
 
@@ -102,11 +102,11 @@
   content: "";
   width: 10px;
   height: 10px;
-  background: #f79d41;
+  background: #4db5ff;
   border-radius: 69%;
   right: 5px;
   top: 10px;
-  box-shadow: 0px 0px 20px #f79d41;
+  box-shadow: 0px 0px 20px #4db5ff;
 }
 
 .loading_orange:before {
@@ -114,7 +114,7 @@
   width: 5px;
   height: 5px;
   position: absolute;
-  background: #f79d41;
+  background: #4db5ff;
   top: 8.8px;
   left: 9px;
   border-radius: 69%;

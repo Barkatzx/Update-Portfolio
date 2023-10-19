@@ -2,14 +2,14 @@
   height: 8px;
   width: 8px;
   margin: 0 10px;
-  background-color: #ff651c;
+  background-color: #4db5ff;
   transform: rotate(45deg);
 }
 
 .middle-line {
   width: 180px;
   height: 4px;
-  background-color: #ff651c;
+  background-color: #4db5ff;
   border-radius: 4px;
   position: relative;
 }
@@ -19,7 +19,7 @@
   width: 10px;
   background-color: #212121;
   transform: rotate(45deg);
-  border: 1px solid #ff651c;
+  border: 1px solid #4db5ff;
   position: absolute;
   top: 0;
   bottom: 0;

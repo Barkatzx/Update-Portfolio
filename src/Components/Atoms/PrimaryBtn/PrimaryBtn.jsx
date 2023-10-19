@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import "./PrimaryBtn.css";
 
-const PrimaryBtn = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const PrimaryBtn = ({ children, className, onClick }) => {
+  return (
+    <button className={`${className} primary-button`} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default PrimaryBtn;

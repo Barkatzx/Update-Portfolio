@@ -1,16 +1,24 @@
-import { useState } from 'react'
-import './App.css'
+import { Suspense } from 'react';
+import { Routes, useLocation } from 'react-router-dom';
+import './App.css';
+import { Loader, ScrollToTop } from './Components/Atoms/allAtoms';
+import NavBar from './Components/CoreCompo/NavBar/NavBar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const location = useLocation();
+  const isFalse = location.pathname.includes("404");
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <ScrollToTop/>
+      {isFalse || <NavBar/>}
+      <Suspense fallback={<Loader/>}>
+        <Routes>
+          
+        </Routes>
+      </Suspense>
     </>
   )
 }
 
-export default App
+export default App;
