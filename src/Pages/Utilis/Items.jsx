@@ -1,16 +1,10 @@
 const Items = [
     {
       id: 1,
-      mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1682699543/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-1_rmh7lp.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682699543/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-1_rmh7lp.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682699548/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-2_p3chy5.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682699706/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-3_uhtwa6.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682699802/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-4_p404nm.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682700118/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-5_mksj57.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682700238/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-6_jfndeo.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682700374/Blog%20Portfolio%20Gilbert/Project/msnproduction/img-7_uhh453.png",
-      ],
+      mainImage: "https://i.ibb.co/qMCRNkc/76a742700f3.png",
+      // img: [
+      //   "https://i.ibb.co/qMCRNkc/76a742700f3.png",
+      // ],
       features: [
         "Home",
         "About",
@@ -30,7 +24,7 @@ const Items = [
         "Email JS",
         "Framer Motion",
       ],
-      title: "Msn Production",
+      title: "The Theater Arts Institute",
       description:
         "PT. MULIA SEJATI NUSANTARA Established on June 24, 2019, a limited liability company engaged in supplier & contractor services. Then on January 22 2022 PT. MULIA SEJATI NUSANTARA Opening a new business branch in the Technology Sector which includes Website Creation, Mobile Applications, Branding, Creative Content, Digital Marketing & Advertising. This branch is called Mulia Sejati Nusantara Production or in short MSN PRODUCTION.",
       category: "business",
@@ -40,19 +34,9 @@ const Items = [
     {
       id: 2,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1682701479/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-4_kmaye9.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701456/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-1_jppjdj.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701463/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-2_ptr4lg.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701467/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-3_gjle1m.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701479/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-4_kmaye9.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701489/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-5_nuhniv.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701492/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-6_rkvmhd.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701496/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-7_xjm4pm.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701499/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-8_dj0qoq.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701502/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-9_d1h5a0.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701505/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-10_kbbkd4.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682701506/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-11_mmspfs.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1682701456/Blog%20Portfolio%20Gilbert/Project/mern-blog/img-1_jppjdj.png",
+      // ],
       features: [
         "User registration and login",
         "Authentication using JWT Tokens",
@@ -95,18 +79,9 @@ const Items = [
     {
       id: 3,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1684312778/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-1_lcun2a.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312778/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-1_lcun2a.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312777/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-2_ar1fex.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312780/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-3_qpebgb.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312777/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-4_yadwtg.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312780/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-5_xvx0vj.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312773/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-6_aaq4yf.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312772/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-7_twij3j.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312773/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-8_njclct.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312774/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-9_zg1jfe.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1684312772/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-10_yag7bj.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1684312778/Blog%20Portfolio%20Gilbert/Project/mern-movie/img-1_lcun2a.png",
+      // ],
       features: [
         "User registration and login",
         "Authentication using JWT Tokens",
@@ -156,26 +131,9 @@ const Items = [
     {
       id: 4,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-2_vsab0u.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-1_gywmlj.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-2_vsab0u.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-3_ktppfh.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-4_g9pcqp.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-5_cugdqq.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-6_d550ha.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-7_u2td2u.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-8_tt0tqg.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-9_thcxyv.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-10_wwmqty.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-11_issyrd.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-12_visvli.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-13_dqy6wg.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-14_kvaem7.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772432/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-15_pzdxsu.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772431/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-16_ven89o.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772432/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-17_wjwedp.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682772432/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-18_zpsewd.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1682772430/Blog%20Portfolio%20Gilbert/Project/mern-penggajian-karyawan/img-1_gywmlj.png",
+      // ],
       features: [
         "Login Admin",
         "Add employee",
@@ -228,13 +186,9 @@ const Items = [
     {
       id: 5,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1683869747/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-1_yhedpu.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683869747/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-1_yhedpu.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683869747/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-2_uktrxk.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683869747/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-3_s1js9i.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683869747/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-4_sb9ga6.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683869748/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-5_wrxlr7.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1683869747/Blog%20Portfolio%20Gilbert/Project/mern-student-management-system/img-1_yhedpu.png",
+      // ],
       features: [
         "Add Student",
         "Edit Student",
@@ -269,11 +223,9 @@ const Items = [
     {
       id: 6,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1682964283/Blog%20Portfolio%20Gilbert/Project/mario-jump-game/img-2_iwduig.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682964283/Blog%20Portfolio%20Gilbert/Project/mario-jump-game/img-1_gpiiro.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682964283/Blog%20Portfolio%20Gilbert/Project/mario-jump-game/img-2_iwduig.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682964283/Blog%20Portfolio%20Gilbert/Project/mario-jump-game/img-3_sk2hyn.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1682964283/Blog%20Portfolio%20Gilbert/Project/mario-jump-game/img-1_gpiiro.png",
+      // ],
       features: [
         "Mobile Responsive",
         "Beautiful Animations",
@@ -299,15 +251,9 @@ const Items = [
     {
       id: 7,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1682944695/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-3_t6uxoj.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944091/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-1_gqero4.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944091/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-2_ukjdh2.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944695/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-3_t6uxoj.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944091/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-4_btevir.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944091/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-5_oakjx2.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944092/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-6_pqefy9.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1682944091/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-7_wfrvb7.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1682944091/Blog%20Portfolio%20Gilbert/Project/bert-quiz/img-1_gqero4.png",
+      // ],
       features: [
         "User registration and login",
         "Select the type of question and the difficulty level of the question",
@@ -335,14 +281,9 @@ const Items = [
     {
       id: 8,
       mainImage: "https://res.cloudinary.com/du541igfh/image/upload/v1683033408/Blog%20Portfolio%20Gilbert/Project/shopify/img-1_q5d6pn.png",
-      img: [
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683033408/Blog%20Portfolio%20Gilbert/Project/shopify/img-1_q5d6pn.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683033411/Blog%20Portfolio%20Gilbert/Project/shopify/img-2_nko9ic.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683033413/Blog%20Portfolio%20Gilbert/Project/shopify/img-3_rnhbr1.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683033408/Blog%20Portfolio%20Gilbert/Project/shopify/img-4_ks8lck.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683033409/Blog%20Portfolio%20Gilbert/Project/shopify/img-5_eotroj.png",
-        "https://res.cloudinary.com/du541igfh/image/upload/v1683033408/Blog%20Portfolio%20Gilbert/Project/shopify/img-6_fgpzef.png",
-      ],
+      // img: [
+      //   "https://res.cloudinary.com/du541igfh/image/upload/v1683033408/Blog%20Portfolio%20Gilbert/Project/shopify/img-1_q5d6pn.png",
+      // ],
       features: [
         "Mobile Responsive",
         "Beautiful Animations",

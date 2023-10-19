@@ -3,9 +3,9 @@ import { FaCode, FaLink } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
-import Items from "../../../Utils/Items";
+import Items from "../../../Pages/Utilis/Items";
 import placeholderImage from "../../../assets/placeholder.jpg";
-import { PrimaryBtn, SecondaryBtn } from "../../../components";
+import { PrimaryBtn, SecondaryBtn } from "../../Atoms/allAtoms";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -36,20 +36,14 @@ const ProjectDetails = () => {
   };
   return (
     <div className="parent py-16">
-      <h1 className="text-center text-4xl font-medium mt-8">{item?.title}</h1>
-
+      <h1 className="text-center text-5xl font-medium">{item?.title}</h1>
       <Slider {...settings}>
         {item?.img?.map((image, index) => (
           <div key={index} className="mt-6">
             <div
-              className="mx-1 md:mx-4 rounded-lg shadow-xl single-blog cursor-pointer border-2 border-primary flex flex-col justify-between"
+              className="mx-1 md:mx-4 rounded-2xl shadow-2xl single-blog cursor-pointer border-2 border-primary flex flex-col justify-between"
               style={{ backgroundColor: "#313131" }}
             >
-              {/* <img
-                src={image}
-                alt={item?.title}
-                className="inline-block w-full h-64 md:h-72 rounded-lg"
-              /> */}
               <LazyLoadImage
                 placeholderSrc={placeholderImage}
                 src={image}
@@ -60,7 +54,7 @@ const ProjectDetails = () => {
         ))}
       </Slider>
       <p className="text-neutral font-medium mt-10 mb-6">
-        <span className="font-semibold text-white text-xl">Description: </span>{" "}
+        <span className="font-semibold text-white text-2xl">Description: </span>{" "}
         {item?.description}
       </p>
       <div className="my-6">
