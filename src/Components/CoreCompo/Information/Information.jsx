@@ -38,9 +38,9 @@ const Information = () => {
                 initial="hidden"
                 animate={viewDiv && "visible"}
                 variants={headingAnimation}
-            >
+            > <h3 className="text-center">My Recent</h3>
                 <h1 className="text-3xl font-semibold text-center">
-                    New <span className="text-primary">Information</span>
+                    Blog Post
                 </h1>
                 <BottomLine />
             </motion.div>
