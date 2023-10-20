@@ -6,8 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import {
-    headingAnimation,
-    sectionBodyAnimation,
+  headingAnimation,
+  sectionBodyAnimation,
 } from "../../../Hooks/useAnimation";
 import Reviews from "../../../Pages/Utilis/Reviews";
 import { BottomLine } from "../../Atoms/allAtoms";
@@ -59,8 +59,8 @@ const Testimonial = () => {
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
-        <h3 className="text-center text-neutral">What My Clients Say</h3>
-        <h1 className="text-4xl font-semibold text-center text-primary">
+        <h3 className="text-center">What My Clients Say</h3>
+        <h1 className="text-4xl font-semibold text-center">
           Testimonials
         </h1>
         <BottomLine />

@@ -77,9 +77,9 @@ const Service = () => {
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
-        <h3 className="text-center text-neutral">What I Provide</h3>
+        <h3 className="text-center">What I Provide</h3>
         <h1 className="text-4xl font-semibold text-center">
-          My <span className="text-primary">Services</span>
+          My Services
         </h1>
         <BottomLine />
       </motion.div>

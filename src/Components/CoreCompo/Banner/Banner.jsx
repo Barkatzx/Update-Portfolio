@@ -49,11 +49,7 @@ const Banner = () => {
           />
         </div>
         <p className="text-neutral max-w-xl mb-6 font-medium translate-y-[-20%] sm:translate-y-[-0%]">
-          As a MERN stack developer, I am committed to building high-quality web
-          applications that meet the needs of my clients. With years of
-          experience in full-stack web development, I specialize in using
-          React.js, Next js, Typescript, MongoDB, Express.js, and Node.js to
-          create scalable and robust web applications.
+        Experienced Web developer with a passion for crafting seamless and user-friendly web applications. I specialize in both frontend and backend technologies, enabling me to deliver end-to-end solutions that meet and exceed client expectations.
           {/* I am a Front-end Developer. I am very passionate to my work and
           dedicated to explore New Tools And Technologies. */}
         </p>

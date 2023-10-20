@@ -47,11 +47,11 @@ const Projects = () => {
           variants={headingAnimation}
         >
           <div className="mb-12">
-            <h3 className="text-neutral text-center">
+            <h3 className="text-center">
               Some Of My Recent Projects
             </h3>
             <h1 className="text-4xl font-semibold text-center">
-              Featured <span className="text-primary">Projects</span>
+              Featured Projects
             </h1>
             <BottomLine />
           </div>

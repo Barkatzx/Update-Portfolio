@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date();
@@ -13,11 +13,11 @@ const Footer = () => {
         <div className="flex items-center justify-center mb-6">
           <a
             className="inline-block mx-2"
-            href="https://twitter.com/barkat_zx"
+            href="https://facebook.com/barkatzx"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter className="text-2xl text-blue-600" />
+            <FaFacebook className="text-2xl text-blue-600" />
           </a>
           <a
             className="inline-block mx-2"
@@ -55,7 +55,7 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://www.upwork.com/freelancers/~0171c0d54d5dea86ec"
+            href="https://www.upwork.com/freelancers/~010da490f5342b9c72"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -63,7 +63,7 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="http://freelancer.com/u/berthutapea"
+            href="https://www.freelancer.com/u/barkatullahdev"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -71,7 +71,7 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://themeforest.net/user/berthutapea"
+            href="https://themeforest.net"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -79,7 +79,7 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://remotehub.com/gilbert.hutapea"
+            href="https://remotehub.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -87,7 +87,7 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://dribbble.com/berthutapea"
+            href="https://dribbble.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -95,7 +95,7 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://drive.google.com/file/d/19rnbukAhf9oPhadMhsvI3xnWF6FIYeMT/view?usp=share_link"
+            href="https://drive.google.com/file/d/1VXr1NADGi3N8t8CbbbEb4B_i0cVKjL40/view"
             target="_blank"
             rel="noopener noreferrer"
           >
