@@ -2,13 +2,13 @@ import emailjs from "@emailjs/browser";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import {
-    FaFacebookSquare,
-    FaGithubSquare,
-    FaLinkedin,
-    FaLocationArrow,
-    FaPhoneAlt,
-    FaTwitterSquare,
-    FaUserAlt
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaLinkedin,
+  FaLocationArrow,
+  FaPhoneAlt,
+  FaTwitterSquare,
+  FaUserAlt
 } from "react-icons/fa";
 import { MdEmail, MdSend } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
@@ -39,10 +39,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_6xnj05v",
-        "template_exk29f8",
+        "service_8fsflsg",
+        "template_2hui968",
         form.current,
-        "kLfLk-o6LKj-L9c77"
+        "KDEwiqMW9T7dFKhtH"
       )
       .then(
         (result) => {

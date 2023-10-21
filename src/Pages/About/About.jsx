@@ -3,6 +3,7 @@ import React from "react";
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { BottomLine } from "../../Components/Atoms/allAtoms";
+import Certificate from "../../Components/CoreCompo/Certificate/Certificate";
 import Education from "../../Components/CoreCompo/Education/Education";
 import MySkill from "../../Components/CoreCompo/MySkill/MySkill";
 import "../Shared/Shared.css";
@@ -125,6 +126,9 @@ const About = () => {
 
       {/* Education */}
       <Education />
+      {/* Achivements and Certificate */}
+
+      <Certificate/>
     </div>
   );
 };

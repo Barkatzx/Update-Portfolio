@@ -65,7 +65,7 @@ const MySkill = () => {
             {languages?.map((skill) => (
               <div key={skill.title} className="text-center m-3">
                 <div
-                  className="rounded-lg h-12 w-12 hover:-translate-y-2 duration-300 flex items-center justify-center text-3xl cursor-pointer shadow-lg hover:shadow-xl bg-[#313131] hover:bg-[#262626] mx-auto"
+                  className="rounded-lg h-12 w-12 hover:-translate-y-2 duration-300 flex items-center justify-center text-3xl cursor-pointer shadow-lg hover:shadow-xl bg-[white] hover:bg-[#262626] mx-auto"
                   title={skill.title}
                 >
                   {skill?.icon}
@@ -80,7 +80,7 @@ const MySkill = () => {
             {frameworks?.map((skill) => (
               <div key={skill.title} className="text-center m-3">
                 <div
-                  className="rounded-lg h-12 w-12 hover:-translate-y-2 duration-300 flex items-center justify-center text-3xl cursor-pointer shadow-lg hover:shadow-xl bg-[#313131] hover:bg-[#262626] mx-auto"
+                  className="rounded-lg h-12 w-12 hover:-translate-y-2 duration-300 flex items-center justify-center text-3xl cursor-pointer shadow-lg hover:shadow-xl bg-[white] hover:bg-[#262626] mx-auto"
                   title={skill.title}
                 >
                   {skill?.icon}
@@ -95,7 +95,7 @@ const MySkill = () => {
             {tools?.map((skill) => (
               <div key={skill.title} className="text-center m-3">
                 <div
-                  className="rounded-lg h-12 w-12 hover:-translate-y-2 duration-300 flex items-center justify-center text-3xl cursor-pointer shadow-lg hover:shadow-xl bg-[#313131] hover:bg-[#262626] mx-auto"
+                  className="rounded-lg h-12 w-12 hover:-translate-y-2 duration-300 flex items-center justify-center text-3xl cursor-pointer shadow-lg hover:shadow-xl bg-[white] hover:bg-[#262626] mx-auto"
                   title={skill.title}
                 >
                   {skill?.icon}

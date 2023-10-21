@@ -29,7 +29,7 @@ const Education = () => {
         </div>
         <div className="mx-auto lg:ml-auto">
           {/* Bachelor Of Arts */}
-          <div className="p-6 bg-[#313131] bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg inline-block w-[300px] hover:shadow-primary duration-300 cursor-pointer">
+          <div className="p-6 bg-[#4db5ff] bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg inline-block w-[300px] hover:shadow-primary duration-300 cursor-pointer">
             <div className="text-right mb-4">
               <h3 className="text-2xl font-semibold">
                 Bachelor Of Arts (B.A)
@@ -42,7 +42,7 @@ const Education = () => {
           </div>
 
           {/* React Developer */}
-          <div className="my-6 md:my-4 md:ml-[200px] p-6 bg-[#313131] bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg w-[300px] hover:shadow-primary duration-300 cursor-pointer">
+          <div className="my-6 md:my-4 md:ml-[200px] p-6 bg-[#4db5ff] bg-opacity-90 backdrop-blur-lg rounded-lg shadow-lg w-[300px] hover:shadow-primary duration-300 cursor-pointer">
             <div className="text-right mb-4">
               <h3 className="text-2xl font-semibold">
                 Full Stack Web Developer
