@@ -6,11 +6,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import { BottomLine } from "../../../Components/Atoms/allAtoms";
 import {
-    headingAnimation,
-    sectionBodyAnimation,
+  headingAnimation,
+  sectionBodyAnimation,
 } from "../../../Hooks/useAnimation";
 import blogs from "../../../Pages/Utilis/Blogs";
 import placeholderImage from "../../../assets/placeholder.jpg";
+import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar";
 
 const BlogIndex = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -47,14 +49,16 @@ const BlogIndex = () => {
   }, [inView, animation]);
 
   return (
-    <div className="parent py-16">
+    <div>
+      <NavBar/>
+    <div className="parent py-16 mt-10">
       <motion.div
         initial="hidden"
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
         <h1 className="text-3xl font-semibold text-center">
-          New <span className="text-primary">Information</span>
+          New Blog Post
         </h1>
         <BottomLine />
       </motion.div>
@@ -118,6 +122,8 @@ const BlogIndex = () => {
           <FaAngleDoubleRight />
         </button>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

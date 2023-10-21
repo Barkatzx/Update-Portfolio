@@ -87,9 +87,17 @@ const ProjectDetails = () => {
             </span>
           </PrimaryBtn>
         </a>
-        <a href={item?.codeLink} target="blank">
+        <a href={item?.clientlink} className="mr-4" target="blank">
           <SecondaryBtn>
-            <span>Source Code</span>
+            <span>Client Code</span>
+            <span>
+              <FaCode />
+            </span>
+          </SecondaryBtn>
+        </a>
+        <a href={item?.serverlink} target="blank">
+          <SecondaryBtn>
+            <span>Server Code</span>
             <span>
               <FaCode />
             </span>

@@ -1,20 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'; // Import BrowserRouter from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import App from './App';
 import BlogDetails from './Components/CoreCompo/BlogDetails/BlogDetails';
+import BlogIndex from './Components/CoreCompo/BlogIndex/BlogIndex';
+import NotFound from './Components/CoreCompo/NotFound/NotFound';
 import ProjectDetails from './Components/CoreCompo/ProjectDetails/ProjectsDetails';
 import About from './Pages/About/About';
-import Blog from './Pages/Blog/Blog';
 import Contact from './Pages/Contact/Contact';
-import Home from './Pages/Home/Home';
 import Projects from './Pages/Projects/Projects';
+import Blogs from './Pages/Utilis/Blogs';
 import './index.css';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <App/>,
+    errorElement: <NotFound/>,
   },
   {
     path: "/project",
@@ -26,12 +29,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
-    element: <Blog/>,
-  },
-  {
-    path: ":blog_path",
-    element: <BlogDetails/>,
-  },
+    element: <BlogIndex/>,
+    children: [
+      {
+        index: true,
+        element: <Blogs />,
+      },
+      {
+        path: ":blog_path",
+        element: <BlogDetails />,
+      },
+    ],
+  },    
   {
     path: "/about",
     element: <About/>,

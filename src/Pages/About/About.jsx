@@ -5,13 +5,17 @@ import { TypeAnimation } from "react-type-animation";
 import { BottomLine } from "../../Components/Atoms/allAtoms";
 import Certificate from "../../Components/CoreCompo/Certificate/Certificate";
 import Education from "../../Components/CoreCompo/Education/Education";
+import Footer from "../../Components/CoreCompo/Footer/Footer";
 import MySkill from "../../Components/CoreCompo/MySkill/MySkill";
+import NavBar from "../../Components/CoreCompo/NavBar/NavBar";
 import "../Shared/Shared.css";
 import "./About.css";
 
 const About = () => {
   return (
-    <div className="parent py-5">
+    <div>
+      <NavBar/>
+    <div className="parent py-10 mt-10">
       <div className="">
         <motion.div
           className="mb-10"
@@ -129,6 +133,8 @@ const About = () => {
       {/* Achivements and Certificate */}
 
       <Certificate/>
+    </div>
+    <Footer/>
     </div>
   );
 };
