@@ -72,7 +72,7 @@ const NavBar = () => {
 
     return (
         <div className={`visible ${show && "nav-hidden"} bg-[#1f1f38] z-50`}>
-            <div className='w-full flex items-center justify-between  md:px-20'>
+            <div className='w-full flex items-center justify-between md:px-16'>
             <div>
                 <Link to ="/">
                     <img className='h-64' src="https://i.ibb.co/j6JxPtk/Logo-Barkat-removebg-preview.png" alt="Barkat"/>
@@ -148,7 +148,7 @@ const NavBar = () => {
                 </li>
                 </ul>
                 <div className="text-center">
-                <p className="text-neutral">
+                <p className="">
                   &copy; Copyright 2023, Barkat Ullah. All Rights Reserved
                 </p>
               </div>

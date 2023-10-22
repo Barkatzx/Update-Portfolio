@@ -27,44 +27,23 @@ const Service = () => {
     {
       id: 1,
       title: "Front End Development",
-      icon: <DiAtom />,
+      icon: <BiPalette /> ,
       description:
-        "As a Front-end developer, I would love to develope any front-end application using React and its libraries.",
+        "My expertise in frontend development spans a wide array of technologies and frameworks, including HTML, CSS, and JavaScript. I harness the power of modern libraries and frameworks like React to create dynamic and responsive user interfaces that adapt to various devices and screen sizes.",
     },
     {
       id: 2,
       title: "MERN Development",
-      icon: <FiServer />,
+      icon: <DiAtom />,
       description:
-        "I am very familiar with NodeJS, Express JS, and MongoDB/Mongoose. So I can build full-stack application with MERN.",
+        "The cornerstone of my web development expertise, and I'm passionate about crafting dynamic, responsive, and feature-rich web applications. The MERN stack, which comprises MongoDB, Express.js, React, and Node.js, is my toolkit of choice for building cutting-edge web solutions.",
     },
     {
       id: 3,
-      title: "Web Design",
-      icon: <BiPalette />,
-      description:
-        "I also provide Fully Responsive Static Website Design with HTML, CSS, Bootstrap, Tailwind.",
-    },
-    {
-      id: 4,
-      title: "Web Management",
-      icon: <FiServer />,
-      description:
-        "I will manage any kinds of website. Data Management, Component management, Service management and so on.",
-    },
-    {
-      id: 5,
       title: "Backend Development",
       icon: <FiServer />,
       description:
-      "MVC Architectural Backend Development with Mongoose (Schema, Model etc) to manage the server easily.",
-    },
-    {
-      id: 6,
-      title: "Database Management",
-      icon: <FiServer />,
-      description:
-        "Connecting Web Database to the server. Fixing All kinds of issue with related to database with database advanced operators.",
+      "My expertise encompasses a wide range of technologies and frameworks, ensuring that your application runs smoothly and securely. I work with databases like MongoDB, and others, tailoring the choice to the specific needs of your project. For building APIs and routing, I leverage frameworks like Express.js, and more, allowing for clean and organized communication between the client and server.",
     },
   ];
   return (
@@ -107,7 +86,7 @@ const Service = () => {
             <h2 className="mb-4 text-2xl font-semibold text-center">
               {service.title}
             </h2>
-            <p className="text-neutral">{service.description}</p>
+            <p className="">{service.description}</p>
           </div>
         ))}
       </motion.div>
