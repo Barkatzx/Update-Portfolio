@@ -7,9 +7,9 @@ import BlogIndex from './Components/CoreCompo/BlogIndex/BlogIndex';
 import NotFound from './Components/CoreCompo/NotFound/NotFound';
 import ProjectDetails from './Components/CoreCompo/ProjectDetails/ProjectsDetails';
 import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
 import Contact from './Pages/Contact/Contact';
 import Projects from './Pages/Projects/Projects';
-import Blogs from './Pages/Utilis/Blogs';
 import './index.css';
 
 
@@ -29,18 +29,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
-    element: <BlogIndex/>,
+    element: <Blog/>,
     children: [
       {
         index: true,
-        element: <Blogs />,
+        element: <BlogIndex/>,
       },
       {
         path: ":blog_path",
-        element: <BlogDetails />,
-      },
-    ],
-  },    
+        element: <BlogDetails/>,
+      }
+    ]
+  },
   {
     path: "/about",
     element: <About/>,

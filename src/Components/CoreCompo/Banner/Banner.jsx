@@ -21,7 +21,7 @@ const Banner = () => {
     },
   };
   return (
-    <div className="parent  flex flex-col-reverse lg:flex-row items-center justify-between">
+    <div className="parent  flex flex-col-reverse lg:flex-row items-center justify-between pt-5">
   <motion.div
     initial={{ x: "-100vw" }}
     animate={{ x: 0 }}
@@ -52,7 +52,7 @@ const Banner = () => {
       Experienced Web developer with a passion for crafting seamless and user-friendly web applications. I specialize in both frontend and backend technologies, enabling me to deliver end-to-end solutions that meet and exceed client expectations.
     </p>
 
-    <div className="flex flex-col sm:flex-row items-center mb-4">
+    <div className="flex sm:flex-row items-center mb-4">
       <a
         href="https://drive.google.com/file/d/1eYr9ajgWpnx7lT5X1lPFFizoY_BdAOyK/view?usp=sharing"
         target="blank"

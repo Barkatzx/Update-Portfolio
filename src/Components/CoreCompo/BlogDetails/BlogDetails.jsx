@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BsCalendarDateFill, BsFillPenFill } from 'react-icons/bs';
 import { FiExternalLink } from "react-icons/fi";
 import { SiInstagram, SiLinkedin } from "react-icons/si";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -17,6 +18,8 @@ import {
 } from "react-share";
 import blogs from "../../../Pages/Utilis/Blogs";
 import placeholderImage from "../../../assets/placeholder.jpg";
+import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar";
 
 const BlogDetails = () => {
   const { blog_path } = useParams();
@@ -29,8 +32,10 @@ const BlogDetails = () => {
   }, [blog_path]);
 
   return (
+    <div>
+      <NavBar/>
     <div className="mt-20">
-      <h1 className="t text-center text-4xl">{blog?.title}</h1>
+      <h1 className="text-center text-4xl">{blog?.title}</h1>
       <div className="text-center my-8">
         <LazyLoadImage
           placeholderSrc={placeholderImage}
@@ -39,19 +44,19 @@ const BlogDetails = () => {
           className="main_blog_image"
         />
       </div>
-      <div className="flex items-center justify-between flex-wrap mt-16 mb-4">
+      <div className="flex items-center justify-between flex-wrap mt-16 mb-4 p-10">
         <span>
-          <strong className="text-primary">Gilbert Hutapea</strong>
+          <strong className="text-lg flex gap-3 items-center"><BsFillPenFill/> Barkat Ullah</strong>
         </span>
         <span>
-          <strong className="text-primary">{blog?.date}</strong>
+          <strong className="text-lg flex gap-3 items-center"><BsCalendarDateFill/> {blog?.date}</strong>
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 p-10">
         <div className="md:col-span-2 lg:col-span-3">
           {blog?.description?.split("\n")?.map((s, i) => (
             <React.Fragment key={i + 1}>
-              <p className="text-neutral text-justify">{s}</p>
+              <p className="text-justify">{s}</p>
               <br />
             </React.Fragment>
           ))}
@@ -93,19 +98,19 @@ const BlogDetails = () => {
             Share :{" "}
           </h4>
           <div className="flex items-center gap-4 flex-wrap">
-            <EmailShareButton url={url} title="Gilbert Hutapea ">
+            <EmailShareButton url={url} title="Barkat Ullah ">
               <EmailIcon size={32} round={true} />
             </EmailShareButton>
-            <FacebookShareButton url={url} title="Gilbert Hutapea ">
+            <FacebookShareButton url={url} title="Barkat Ullah ">
               <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
-            <TwitterShareButton url={url} title="Gilbert Hutapea ">
+            <TwitterShareButton url={url} title="Barkat Ullah ">
               <TwitterIcon size={32} round={true} />
             </TwitterShareButton>
-            <LinkedinShareButton url={url} title="Gilbert Hutapea ">
+            <LinkedinShareButton url={url} title="Barkat Ullah ">
               <LinkedinIcon size={32} round={true} />
             </LinkedinShareButton>
-            <WhatsappShareButton url={url} title="Gilbert Hutapea ">
+            <WhatsappShareButton url={url} title="Barkat Ullah ">
               <WhatsappIcon size={32} round={true} />
             </WhatsappShareButton>
           </div>
@@ -125,6 +130,8 @@ const BlogDetails = () => {
           </div>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };
