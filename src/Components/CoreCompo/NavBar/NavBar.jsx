@@ -75,7 +75,7 @@ const NavBar = () => {
             <div className='w-full flex items-center justify-between md:px-16'>
             <div>
                 <Link to ="/">
-                    <img className='h-64' src="https://i.ibb.co/j6JxPtk/Logo-Barkat-removebg-preview.png" alt="Barkat"/>
+                    <img className='h-60' src="https://i.ibb.co/j6JxPtk/Logo-Barkat-removebg-preview.png" alt="Barkat"/>
                 </Link>
             </div>
             <div>

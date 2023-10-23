@@ -63,7 +63,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div className="parent py-24 mt-4">
+    <div className="parent py-24 pt-4">
       <motion.div
         initial="hidden"
         animate={viewDiv && "visible"}
