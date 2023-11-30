@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaCoffee, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date();
@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="w-full text-center p-6 bg-accent"
+        className="w-full text-center p-6 bg-accent mt-4"
         style={{ backgroundColor: "#2c2c6c" }}
       >
         <div className="flex items-center justify-center mb-6">
@@ -37,11 +37,11 @@ const Footer = () => {
           </a>
           <a
             className="inline-block mx-2"
-            href="https://www.instagram.com/"
+            href="https://www.buymeacoffee.com/barkatzx"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="text-2xl text-pink-500" />
+            <FaCoffee className="text-2xl text-yellow-500" />
           </a>
         </div>
         <div className="hidden  md:flex items-center justify-center mb-6 flex-wrap">
@@ -71,27 +71,11 @@ const Footer = () => {
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://themeforest.net"
+            href="https://www.buymeacoffee.com/barkatzx"
             target="_blank"
             rel="noopener noreferrer"
           >
-            ThemeForest
-          </a>
-          <a
-            className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://remotehub.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            RemoteHub
-          </a>
-          <a
-            className="text-xl font-semibold inline-bloc mx-6 text-white"
-            href="https://dribbble.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Dribbble
+            Buy me a Coffee
           </a>
           <a
             className="text-xl font-semibold inline-bloc mx-6 text-white"

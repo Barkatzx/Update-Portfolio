@@ -25,6 +25,7 @@ const Testimonial = () => {
       setViewDiv(false);
     }
   }, [inView, animation]);
+
   const settings = {
     dots: true,
     arrows: false,
@@ -52,7 +53,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="py-12 parent">
+    <div className="container mx-auto mt-10">
       <motion.div
         className="mb-8"
         initial="hidden"
@@ -81,12 +82,12 @@ const Testimonial = () => {
               >
                 <div className="px-6">
                   <FaQuoteLeft className="mb-4 text-6xl text-primary"></FaQuoteLeft>
-                  <h2 className="text-center">{review.description}</h2>
+                  <h2 className="text-center text-lg font-semibold">{review.description}</h2>
                 </div>
-                <div className="flex justify-end px-6 py-2 mt-12 rounded-b bg-primary">
+                <div className="flex justify-end px-6 py-2 pt-5 bg-primary">
                   <div className="mr-4 text-right text-gray-200">
-                    <h2 className="font-medium leading-none">{review.name}</h2>
-                    <p className="text-xs leading-none">{review.bio}</p>
+                    <h2 className="font-medium text-lg leading-none">{review.name}</h2>
+                    <p className="text-xs font-medium leading-none mt-2">{review.bio}</p>
                   </div>
                   <img
                     src={review.img}

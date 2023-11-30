@@ -21,13 +21,13 @@ const Banner = () => {
     },
   };
   return (
-    <div className="parent  flex flex-col-reverse lg:flex-row items-center justify-between pt-5">
+    <div className="parent  flex flex-col-reverse lg:flex-row items-center justify-between mt-10">
   <motion.div
     initial={{ x: "-100vw" }}
     animate={{ x: 0 }}
     transition={{ duration: 1 }}
   >
-    <h2 className="text-neutral text-xl font-medium mb-2 pl-4 sm:mb-0">Hello, I'm</h2>
+    <h2 className="text-neutral text-xl font-medium mt-6 mb-2 pl-4 sm:mb-0">Hello, I'm</h2>
     <h1 className="text-4xl font-semibold mb-2 pl-4 sm:mb-0">Barkat Ullah</h1>
     <div className="my-4">
       <TypeAnimation
@@ -41,14 +41,14 @@ const Banner = () => {
           "A Front-End Developer",
           2000,
           2000,
-          "A Web Developer",
+          "A Web Designer",
           2000,
         ]}
         wrapper="div"
         repeat={Infinity}
       />
     </div>
-    <p className="max-w-xl pl-4 mb-6 font-medium">
+    <p className="max-w-xl pl-4 mb-6 text-xl">
       Experienced Web developer with a passion for crafting seamless and user-friendly web applications. I specialize in both frontend and backend technologies, enabling me to deliver end-to-end solutions that meet and exceed client expectations.
     </p>
 

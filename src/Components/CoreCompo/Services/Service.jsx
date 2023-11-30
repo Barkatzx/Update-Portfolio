@@ -47,7 +47,7 @@ const Service = () => {
     },
   ];
   return (
-    <div className=" parent"
+    <div className="container mx-auto mt-10"
     // style={{ backgroundColor: "#313131" }}
     >
       <motion.div
@@ -83,10 +83,10 @@ const Service = () => {
                 {service.icon}
               </span>
             </div>
-            <h2 className="mb-4 text-2xl font-semibold text-center">
+            <h2 className="mb-4 text-3xl font-semibold text-center">
               {service.title}
             </h2>
-            <p className="">{service.description}</p>
+            <p className="text-xl font-normal">{service.description}</p>
           </div>
         ))}
       </motion.div>

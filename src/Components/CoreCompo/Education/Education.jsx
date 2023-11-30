@@ -12,7 +12,7 @@ const Education = () => {
     },
   };
   return (
-    <div className="pt-24">
+    <div className="pt-10">
       <div className="mb-12">
         <h1 className="text-4xl font-semibold drop-shadow-md text-center">
           My Qualification

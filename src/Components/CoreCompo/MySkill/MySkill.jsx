@@ -53,7 +53,7 @@ const MySkill = () => {
     },
   };
   return (
-    <div className="pt-24">
+    <div className="pt-10">
       <h1 className="text-4xl font-semibold drop-shadow-md text-center mb-8">
         My Skills
       </h1>

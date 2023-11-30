@@ -14,9 +14,9 @@ import { MdEmail, MdSend } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import "../../Components/Atoms/PrimaryBtn/PrimaryBtn";
 import { BottomLine } from "../../Components/Atoms/allAtoms";
 import { contactAnimation, headingAnimation } from "../../Hooks/useAnimation";
-import "../../components/atoms/PrimaryBtn/PrimaryBtn.css";
 import "../Shared/Shared.css";
 import "./Contact.css";
 
@@ -37,12 +37,19 @@ const Contact = () => {
 
   const handleSend = (e) => {
     e.preventDefault();
+    // emailjs
+    //   .sendForm(
+    //     "service_8fsflsg",
+    //     "template_2hui968",
+    //     form.current,
+    //     "KDEwiqMW9T7dFKhtH"
+    //   )
     emailjs
       .sendForm(
-        "service_8fsflsg",
-        "template_2hui968",
+        import.meta.env.SERVICE_ID,
+        import.meta.env.TEMPLATE_ID,
         form.current,
-        "KDEwiqMW9T7dFKhtH"
+        import.meta.env.USER_ID
       )
       .then(
         (result) => {
@@ -63,7 +70,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div className="parent py-24 pt-4">
+    <div className="container mx-auto mt-10">
       <motion.div
         initial="hidden"
         animate={viewDiv && "visible"}
@@ -75,7 +82,7 @@ const Contact = () => {
         </h1>
         <BottomLine />
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <div className="flex flex-col md:flex-row  justify-between mt-10 p-4">
         <motion.div
           className=""
           ref={ref}

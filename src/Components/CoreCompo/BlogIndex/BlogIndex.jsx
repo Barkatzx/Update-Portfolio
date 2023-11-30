@@ -1,3 +1,4 @@
+import axios from "axios";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
@@ -9,98 +10,121 @@ import {
   headingAnimation,
   sectionBodyAnimation,
 } from "../../../Hooks/useAnimation";
-import blogs from "../../../Pages/Utilis/Blogs";
 import placeholderImage from "../../../assets/placeholder.jpg";
-import Footer from "../Footer/Footer";
-import NavBar from "../NavBar/NavBar";
 
 const BlogIndex = () => {
+  // State variables
   const [currentPage, setCurrentPage] = useState(1);
   const [blogsPerPage] = useState(6);
   const [ref, inView] = useInView();
   const [viewDiv, setViewDiv] = useState(false);
-  const animation = useAnimation();;
+  const animation = useAnimation();
+  const [blogs, setBlogs] = useState([]);
+
+  // Calculate the index of the first and last blogs to display
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = blogs
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(indexOfFirstBlog, indexOfLastBlog);
 
-  const totalPages = Math.ceil(blogs.length / blogsPerPage);
+  // Get the current blogs based on pagination
+ // Get the current blogs based on pagination, sorted in descending order
+      // Get the current blogs based on pagination, sorted by date in ascending order
+const currentBlogs =
+blogs &&
+blogs
+  .filter((blog) => blog.date) // Filter out entries without a date
+  .map((blog) => ({ ...blog, date: new Date(blog.date) })) // Convert date strings to Date objects
+  .sort((a, b) => a.date - b.date) // Sort in ascending order by date
+  .slice(indexOfFirstBlog, indexOfLastBlog)
+  .reverse(); // Reverse the array to show most recent blogs first
 
+  // Calculate the total number of pages
+  const totalPages = Math.ceil((blogs && blogs.length) / blogsPerPage);
+
+  // Handle click for the next page
   const handleNextPageClick = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
 
+  // Handle click for the previous page
   const handlePreviousPageClick = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
+  // Fetch data from the server when the component mounts or when 'inView' changes
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://barkat-portfolio-server.vercel.app/blogs");
+        setBlogs(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    console.log(blogs);
+  
+    // Set the viewDiv state based on inView
     if (inView) {
       setViewDiv(true);
     } else {
       setViewDiv(false);
     }
-  }, [inView, animation]);
+  
+    // Call the fetchData function
+    fetchData();
+  }, [inView, animation, setBlogs, setViewDiv]); // Make sure to include dependencies
+  
 
   return (
-    <div>
-      <NavBar/>
-    <div className="parent py-16 mt-10">
+    <div className="parent py-16 pt-10">
       <motion.div
         initial="hidden"
         animate={viewDiv && "visible"}
         variants={headingAnimation}
       >
-        <h1 className="text-3xl font-semibold text-center">
-          New Blog Post
-        </h1>
+        <h1 className="text-3xl font-semibold text-center">New Blog Post</h1>
         <BottomLine />
       </motion.div>
       <div className="mt-10">
         <motion.div
-          className=" grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
           ref={ref}
           initial="hidden"
           animate={viewDiv && "visible"}
           variants={sectionBodyAnimation}
         >
-          {currentBlogs.map((blog) => {
-            const { _id, title, date, img, description, path } = blog;
-            return (
-              <div
-                key={_id}
-                className="flex flex-col w-full items-center justify-between gap-8 rounded-lg min-h-32"
-              >
-                <div className="w-full">
-                  <Link to={"/blog/" + path}>
-                    <LazyLoadImage
-                      placeholderSrc={placeholderImage}
-                      src={img}
-                      className="rounded-lg blog_image cursor-pointer"
-                    />
-                  </Link>
-                </div>
-                <div className="w-full">
-                  <h2 className="text-[22px] font-medium text-white cursor-pointer hover:text-primary mt-[-25px]">
-                    <Link to={"/blog/" + path}>{title}</Link>
-                  </h2>
-                  <span className="text-gray-600 text-sm">
-                    <p>{date}</p>
-                  </span>
-                  <p className="text-neutral mt-1 mb-6">
-                    {description?.slice(0, 80)} ...
-                  </p>
+          {blogs.length > 0 ? (
+  currentBlogs.map((blog) => (
+    <div
+      key={blog._id}
+      className="relative"
+    >
+      <Link to={`/blogs/${blog._id}`}>
+        <LazyLoadImage
+          placeholderSrc={placeholderImage}
+          src={blog.photo}
+          className="rounded-2xl w-auto h-80 cursor-pointer shadow-xl"
+        />
+      </Link>
+      <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-end p-4">
+      <div className="text-lg font-semibold text-yellow-400">{blog.category}
+        </div>
+        <h2 className="text-gray-300 text-2xl font-bold cursor-pointer hover:text-white">
+          <Link to={`/blogs/${blog._id}`}>{blog.title}</Link>
+        </h2>
+        <p className="text-white font-semibold">{blog.date.toDateString()}</p>
+      </div>
+    </div>
+  ))
+) : (
+  <p className="text-lg font-semibold">No blogs available.</p>
+)}
 
-                </div>
-              </div>
-            );
-          })}
+
         </motion.div>
       </div>
       <div className="flex justify-center items-center mt-10">
@@ -122,8 +146,6 @@ const BlogIndex = () => {
           <FaAngleDoubleRight />
         </button>
       </div>
-    </div>
-    <Footer/>
     </div>
   );
 };

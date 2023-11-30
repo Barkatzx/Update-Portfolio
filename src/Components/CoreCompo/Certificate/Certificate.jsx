@@ -4,7 +4,7 @@ import { BottomLine } from '../../Atoms/allAtoms';
 
 const Certificate = () => {
     return (
-        <div className="parent py-5">
+        <div className="parent py-5 pt-10">
             <div className="text-center mb-10">
                 <motion.div
                     initial={{ y: -200, opacity: 0 }}

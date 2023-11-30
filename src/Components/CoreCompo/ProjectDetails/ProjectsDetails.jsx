@@ -1,18 +1,33 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaCode, FaLink } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
-import Items from "../../../Pages/Utilis/Items";
+import LodingSpinner from "../../../Pages/Loader/LodingSpinner";
 import placeholderImage from "../../../assets/placeholder.jpg";
 import { PrimaryBtn, SecondaryBtn } from "../../Atoms/allAtoms";
 
 const ProjectDetails = () => {
   const { id } = useParams();
   const [item, setItem] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    const filtered = Items.find((item) => item.id === parseInt(id));
-    setItem(filtered);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`https://barkat-portfolio-server.vercel.app/project/${id}`);
+        setItem(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError("Error fetching data. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, [id]);
 
   const settings = {
@@ -34,8 +49,17 @@ const ProjectDetails = () => {
       },
     ],
   };
+
+  if (loading) {
+    return <LodingSpinner/>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
-    <div className="parent py-16">
+    <div className="container mx-auto pt-20">
       <h1 className="text-center text-5xl font-medium">{item?.title}</h1>
       <Slider {...settings}>
         {item?.img?.map((image, index) => (
@@ -55,31 +79,32 @@ const ProjectDetails = () => {
       </Slider>
       <p className="text-neutral font-medium mt-10 mb-6">
         <span className="font-semibold text-white text-2xl">Description: </span>{" "}
-        {item?.description}
+        <span className="text-xl">{item?.description}</span>
       </p>
       <div className="my-6">
         <h2 className="text-2xl font-semibold mb-3">Features:</h2>
-        <ul className="list-disc grid grid-cols-1 md:grid-cols-2 ml-4">
-          {item?.features?.map((feature, index) => (
+        <ul className="text-xl text-neutral">
+          {/* {item?.features?.map((feature, index) => (
             <li key={index} className="text-neutral">
               {feature}
             </li>
-          ))}
+          ))} */}
+          {item?.feature}
         </ul>
       </div>
 
       <div className="my-6">
         <h2 className="text-2xl font-semibold mb-3">Tools & Technologies:</h2>
         <ul className="list-disc grid grid-cols-1 md:grid-cols-2 ml-4">
-          {item?.technologies?.map((feature, index) => (
-            <li key={index} className="text-neutral">
+          {item?.technology?.map((feature, index) => (
+            <li key={index} className="text-neutral text-xl">
               {feature}
             </li>
           ))}
         </ul>
       </div>
-      <div className="flex items-center mt-8">
-        <a href={item?.liveLink} className="mr-4" target="blank">
+      <div className="flex items-center">
+        <a href={item?.livelink} className="mr-4" target="blank">
           <PrimaryBtn>
             <span>Visit Now</span>
             <span>
