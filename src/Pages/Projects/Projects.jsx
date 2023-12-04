@@ -9,6 +9,8 @@ import { headingAnimation, sectionBodyAnimation } from "../../Hooks/useAnimation
 import LodingSpinner from "../Loader/LodingSpinner";
 import "./Projects.css";
 
+// ... (previous imports)
+
 const Projects = () => {
   const [items, setItems] = useState([]);
   const [activeBtn, setActiveBtn] = useState("all");
@@ -24,41 +26,33 @@ const Projects = () => {
         const response = await axios.get("https://barkat-portfolio-server.vercel.app/project");
         const data = response.data;
         setIsLoading(false);
-  
-        if (location.pathname === "/" || location.pathname === "/project") {
-          // Reverse the order for both "/" and "/project" routes
-          setItems(data.slice().reverse());
-        } else {
-          setItems(data);
-        }
+
+        // Always set items in reverse order
+        setItems(data.slice().reverse().slice(0, 6));
       } catch (error) {
         console.error("Error fetching data:", error);
         setIsLoading(false);
       }
     };
-  
+
     if (inView) {
       setViewDiv(true);
     } else {
       setViewDiv(false);
     }
-  
+
     fetchData();
-  }, [inView, location.pathname]);
-  
+  }, [inView]);
 
   const filterItem = (category) => {
     const filtered = items.filter((item) => item.category === category);
-    setItems(prevItems => {
-      if (filtered.length > 3 && location.pathname === "/") {
-        return filtered.slice(0, 3);
-      }
-      return filtered;
-    });
+    setItems(
+      filtered.length > 6 ? filtered.slice(0, 6) : filtered
+    );
   };
 
   if (isLoading) {
-    return <LodingSpinner/>;
+    return <LodingSpinner />;
   }
 
   return (
@@ -83,15 +77,16 @@ const Projects = () => {
           variants={sectionBodyAnimation}
         >
           <div className="mt-6 mb-2 flex items-center justify-center flex-wrap">
-          <button
-  className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${activeBtn === "all" && "active-btn"}`}
-  onClick={() => {
-    setActiveBtn("all");
-    location.pathname === "/" ? setItems(items.slice(0, 6)) : setItems(items);
-  }}
->
-  All
-</button>
+            <button
+              className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${activeBtn === "all" && "active-btn"}`}
+              onClick={() => {
+                setActiveBtn("all");
+                // Set items to the first 6 projects
+                setItems(items.slice(0, 6));
+              }}
+            >
+              All
+            </button>
             <button
               className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${activeBtn === "business" && "active-btn"}`}
               onClick={() => {
@@ -121,42 +116,41 @@ const Projects = () => {
             </button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.slice().map((item) => (
-  <motion.div
-    key={item._id}
-    initial={{ x: 200, opacity: 0, scale: 0 }}
-    animate={{
-      x: 0,
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 0.3 },
-    }}
-    className="item-container rounded-2xl shadow-2xl p-2 flex flex-col justify-between hover:shadow-primary duration-500"
-    style={{ backgroundColor: "#313131" }}
-  >
-    <div className="item h-full">
-      <img
-        className="rounded-lg h-full w-full"
-        src={item.photo}
-        alt={item.title || "Item Image"}
-      />
-      <div className="overlay">
-        <h3 className="text-2xl text-primary font-semibold">
-          {item.title}
-        </h3>
-        <Link
-          to={`/project/${item._id}`}
-          className="mt-3 inline-block"
-        >
-          <button className="btn btn-sm border-2 border-transparent bg-primary hover:bg-transparent text-white hover:border-primary duration-500">
-            See Details
-          </button>
-        </Link>
-      </div>
-    </div>
-  </motion.div>
-))}
-
+            {items.map((item) => (
+              <motion.div
+                key={item._id}
+                initial={{ x: 200, opacity: 0, scale: 0 }}
+                animate={{
+                  x: 0,
+                  scale: 1,
+                  opacity: 1,
+                  transition: { duration: 0.3 },
+                }}
+                className="item-container rounded-2xl shadow-2xl p-2 flex flex-col justify-between hover:shadow-primary duration-500"
+                style={{ backgroundColor: "#313131" }}
+              >
+                <div className="item h-full">
+                  <img
+                    className="rounded-lg h-full w-full"
+                    src={item.photo}
+                    alt={item.title || "Item Image"}
+                  />
+                  <div className="overlay">
+                    <h3 className="text-2xl text-primary font-semibold">
+                      {item.title}
+                    </h3>
+                    <Link
+                      to={`/project/${item._id}`}
+                      className="mt-3 inline-block"
+                    >
+                      <button className="btn btn-sm border-2 border-transparent bg-primary hover:bg-transparent text-white hover:border-primary duration-500">
+                        See Details
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
@@ -181,3 +175,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

@@ -16,7 +16,7 @@ import Blog from './Pages/Blog/Blog';
 import Contact from './Pages/Contact/Contact';
 import LodingSpinner from './Pages/Loader/LodingSpinner';
 import Login from './Pages/Login/Login';
-import Projects from './Pages/Projects/Projects';
+import AllProject from './Pages/Projects/AllProject';
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './Provider/PrivateRoute';
 import './index.css';
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/project",
-        element: <Projects/>,
+        element: <AllProject/>,
       },
       {
         path: "/project/:id",
