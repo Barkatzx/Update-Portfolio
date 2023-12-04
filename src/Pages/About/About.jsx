@@ -53,7 +53,7 @@ const About = () => {
           transition: { duration: 1, delay: 1.25 },
         }}
       >
-        <h1 className="text-4xl font-semibold mb-4 text-center sm:text-3xl sm:mb-2 md:text-left">Barkat Ullah</h1>
+        <h1 className="text-4xl font-semibold mb-4 text-center sm:text-3xl sm:mb-2 md:text-left uppercase">Barkat Ullah</h1>
         <div className="my-8">
           <TypeAnimation
             className="text-2xl text-primary font-bold text-center sm:text-2xl sm:mb-2 md:text-left"
@@ -70,14 +70,14 @@ const About = () => {
             repeat={Infinity}
           />
         </div>
-        <p className="text-neutral font-medium text-center sm:mb-2 md:text-left">
+        <p className="font-medium text-2xl text-center sm:mb-2 md:text-left">
           As a MERN stack developer, I am committed to building high-quality
           web applications that meet the needs of my clients. With years of
           experience in full-stack web development, I specialize in using
           React.js, Next.js, Typescript, MongoDB, Express.js, and Node.js to
           create scalable and robust web applications. Dedicated Front-end developer. Capable to solve working problems. Passionate about learning & development to reach the target. Eager to tackle more complex problems and continue to find ways to maximize user efficiency.
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-4 mt-4 text-center sm:mb-2 md:text-left ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-4 mt-4 text-center sm:mb-2 md:text-left text-2xl">
           <h2 className="font-medium">
             <span className="mr-2 text-primary">Name : </span>Barkat Ullah
           </h2>

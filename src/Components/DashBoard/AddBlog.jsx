@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import DOMPurify from 'dompurify';
+import React, { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; // Import the styles
+import 'react-quill/dist/quill.snow.css';
 import Swal from 'sweetalert2';
 
 const AddBlog = () => {
   const formRef = React.useRef();
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [paragraph, setParagraph] = useState(""); // State for the paragraph content
+  const [paragraph, setParagraph] = useState("");
+
+  // Assuming you have a blogId as a prop to identify the blog being edited
+  const [blogId, setBlogId] = useState(null);
+
+  // Fetch blog content if editing an existing blog post
+  useEffect(() => {
+    const fetchBlogContent = async () => {
+      // Fetch blog content based on the blogId
+      if (blogId) {
+        try {
+          const response = await fetch(`https://barkat-portfolio-server.vercel.app/blogs/${blogId}`);
+          const data = await response.json();
+          const sanitizedContent = DOMPurify.sanitize(data.paragraph, { ALLOWED_TAGS: ['h1', 'h2', 'h3', 'p', 'u', 'strong', 'em', 'a', 'ol', 'ul', 'li'] });
+          setParagraph(sanitizedContent);
+        } catch (error) {
+          console.error('Error fetching blog content:', error);
+        }
+      }
+    };
+
+    fetchBlogContent();
+  }, [blogId]);
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -20,16 +43,7 @@ const AddBlog = () => {
     const date = form.date.value;
     const category = form.category.value;
 
-    // Manually remove disallowed attributes using a regular expression
-    const sanitizedParagraph = paragraph.replace(/<[^>]+>/g, (match) => {
-      // Allow specific tags and attributes
-      if (match.match(/<(\s*)\/?(\s*)(h1|h2|h3|p|u|strong|em|a|ol|ul|li)([^>]*)>/)) {
-        return match;
-      }
-      return ''; // Remove all other tags
-    });
-
-    const newBlogs = { photo, title, paragraph: sanitizedParagraph, date, category };
+    const newBlogs = { photo, title, paragraph, date, category };
 
     form.reset();
     console.log(newBlogs);
@@ -57,11 +71,17 @@ const AddBlog = () => {
       }
     } catch (error) {
       console.error('Error:', error);
+      Swal.fire({
+        title: 'Error!',
+        text: 'An error occurred while adding the blog.',
+        icon: 'error',
+        confirmButtonText: 'Ok',
+      });
     }
   };
 
   return (
-    <div className="bg-slate-200 rounded-md shadow-md p-10 container mx-auto">
+    <div className="bg-gray-200 rounded-md shadow-md p-10 container mx-auto">
       <h2 className="text-2xl font-semibold mb-4 text-center">Add Blog</h2>
       <form ref={formRef} onSubmit={handleSubmit}>
         <div className="mb-4">

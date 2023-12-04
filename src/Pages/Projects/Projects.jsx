@@ -82,7 +82,7 @@ const Projects = () => {
           animate={viewDiv && "visible"}
           variants={sectionBodyAnimation}
         >
-          <div className="mt-6 mb-2 flex items-center justify-center flex-wrap">
+          {/* <div className="mt-6 mb-2 flex items-center justify-center flex-wrap">
           <button
   className={`btn btn-sm bg-primary border-2 border-primary text-white hover:bg-transparent hover:border-primary duration-300 mx-3 my-3 sm:my-0 ${activeBtn === "all" && "active-btn"}`}
   onClick={() => {
@@ -119,7 +119,7 @@ const Projects = () => {
             >
               Portfolio
             </button>
-          </div>
+          </div> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.slice().map((item) => (
   <motion.div

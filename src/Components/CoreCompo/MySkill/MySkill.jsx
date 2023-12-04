@@ -60,7 +60,7 @@ const MySkill = () => {
       <div className="flex flex-col md:flex-row items-center justify-evenly my-8">
 
         <div>
-          <h2 className="text-xl font-semibold">Languages:</h2>
+          <h2 className="text-2xl font-semibold">Languages:</h2>
           <div className="flex flex-wrap mb-4">
             {languages?.map((skill) => (
               <div key={skill.title} className="text-center m-3">
@@ -73,7 +73,7 @@ const MySkill = () => {
               </div>
             ))}
           </div>
-          <h2 className=" text-xl font-semibold">
+          <h2 className=" text-2xl font-semibold">
             Library & Frameworks:
           </h2>
           <div className="flex flex-wrap mb-4">
@@ -88,7 +88,7 @@ const MySkill = () => {
               </div>
             ))}
           </div>
-          <h2 className="text-xl font-semibold">
+          <h2 className="text-2xl font-semibold">
             Tools & Technologies:
           </h2>
           <div className="flex flex-wrap mb-4">
