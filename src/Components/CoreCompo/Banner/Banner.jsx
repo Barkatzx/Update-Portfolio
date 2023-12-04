@@ -28,10 +28,10 @@ const Banner = () => {
     transition={{ duration: 1 }}
   >
     <h2 className="text-neutral text-xl font-medium mt-6 mb-2 pl-4 sm:mb-0">Hello, I'm</h2>
-    <h1 className="text-4xl font-semibold mb-2 pl-4 sm:mb-0">Barkat Ullah</h1>
+    <h1 className="text-4xl font-semibold mb-2 pl-4 sm:mb-0 uppercase">Barkat Ullah</h1>
     <div className="my-4">
       <TypeAnimation
-        className="text-2xl text-primary font-bold mb-2 ml-4 sm:mb-0"
+        className="text-2xl text-primary mb-2 ml-4 sm:mb-0"
         cursor={true}
         sequence={[
           "A MERN Stack Developer",
@@ -40,15 +40,16 @@ const Banner = () => {
           2000,
           "A Front-End Developer",
           2000,
-          2000,
           "A Web Designer",
+          2000,
+          "A Youtuber",
           2000,
         ]}
         wrapper="div"
         repeat={Infinity}
       />
     </div>
-    <p className="max-w-xl pl-4 mb-6 text-xl">
+    <p className="max-w-xl pl-4 mb-6 text-2xl">
       Experienced Web developer with a passion for crafting seamless and user-friendly web applications. I specialize in both frontend and backend technologies, enabling me to deliver end-to-end solutions that meet and exceed client expectations.
     </p>
 

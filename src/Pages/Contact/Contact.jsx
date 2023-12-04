@@ -44,13 +44,12 @@ const Contact = () => {
     //     form.current,
     //     "KDEwiqMW9T7dFKhtH"
     //   )
-    emailjs
-      .sendForm(
-        import.meta.env.SERVICE_ID,
-        import.meta.env.TEMPLATE_ID,
-        form.current,
-        import.meta.env.USER_ID
-      )
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_USER_ID
+    )    
       .then(
         (result) => {
           console.log(result.text);

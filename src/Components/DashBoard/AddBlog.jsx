@@ -1,7 +1,5 @@
 import DOMPurify from 'dompurify';
 import React, { useEffect, useState } from 'react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 import Swal from 'sweetalert2';
 
 const AddBlog = () => {
@@ -37,13 +35,19 @@ const AddBlog = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Sanitize HTML content before sending it to the server
+    const sanitizedParagraph = DOMPurify.sanitize(paragraph, {
+      ALLOWED_TAGS: ['h1', 'h2', 'h3', 'p', 'u', 'strong', 'em', 'a', 'ol', 'ul', 'li']
+    });
+
     const form = formRef.current;
     const photo = form.photo.value;
     const title = form.title.value;
     const date = form.date.value;
     const category = form.category.value;
 
-    const newBlogs = { photo, title, paragraph, date, category };
+    const newBlogs = { photo, title, paragraph: sanitizedParagraph, date, category };
 
     form.reset();
     console.log(newBlogs);
@@ -124,36 +128,35 @@ const AddBlog = () => {
           />
         </div>
         <div className="mb-4">
-        <label htmlFor="category" className="block font-bold text-xl">
-        Category:
-      </label>
-      <select
-        id="category"
-        name="category"
-        className="mt-1 p-2 w-full border rounded-md text-black"
-        value={selectedCategory}
-        onChange={handleCategoryChange}
-        required
-      >
-        <option value="" disabled>Select a category</option>
-        <option value="Productive">Productive</option>
-        <option value="Motivational">Motivational</option>
-        <option value="Book Review">Book Review</option>
-        <option value="Javascript">Javascript</option>
-        <option value="React">React</option>
-        <option value="MongoDB">MongoDB</option>
-        <option value="Express Js">Express Js</option>
-        <option value="Node Js">Node Js</option>
-      </select>
+          <label htmlFor="category" className="block font-bold text-xl">
+            Category:
+          </label>
+          <select
+            id="category"
+            name="category"
+            className="mt-1 p-2 w-full border rounded-md text-black"
+            value={selectedCategory}
+            onChange={handleCategoryChange}
+            required
+          >
+            <option value="" disabled>Select a category</option>
+            <option value="Productive">Productive</option>
+            <option value="Motivational">Motivational</option>
+            <option value="Book Review">Book Review</option>
+            <option value="Javascript">Javascript</option>
+            <option value="React">React</option>
+            <option value="MongoDB">MongoDB</option>
+            <option value="Express Js">Express Js</option>
+            <option value="Node Js">Node Js</option>
+          </select>
         </div>
         <div className="mb-4">
           <label htmlFor="paragraph" className="block font-bold text-xl">
             Paragraph:
           </label>
-          <ReactQuill
-            theme="snow"
+          <textarea
             value={paragraph}
-            onChange={(value) => setParagraph(value)}
+            onChange={(e) => setParagraph(e.target.value)}
             className="p-2 w-full rounded-md text-black"
             placeholder="Paragraph"
             required

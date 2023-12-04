@@ -38,7 +38,7 @@ const BlogDetails = () => {
           placeholderSrc={placeholderImage}
           src={blogData?.photo}
           alt="Blog Main Image"
-          className="main_blog_image"
+          className="main_blog_image rounded-xl shadow-xl"
         />
       </div>
       <div>
@@ -60,7 +60,7 @@ const BlogDetails = () => {
         </span>
       </div>
       <div className="p-5">
-        <div className="text-xl text-neutral">
+        <div className="text-2xl">
           {blogData?.paragraph?.split("\n")?.map((s, i) => (
             <React.Fragment key={i + 1}>
               <p className="text-justify">{s}</p>
