@@ -37,12 +37,15 @@ const About = () => {
           transition: { duration: 1, delay: 1.25 },
         }}
       >
-        <img
-          src="https://i.ibb.co/vxkrsLM/P3-OLGJ1-copy-1.png"
-          alt="Barkat Ullah"
-          className="p-12 w-70 h-70 transform translate-y-[-12%]"
-          title="Barkat Ullah"
-        />
+        <div class="relative w-full h-full overflow-hidden rounded-full shadow-2xl">
+  <img
+    src="https://i.ibb.co/wWtS66N/1701183840759-removebg-preview.png"
+    alt="Barkat Ullah"
+    class="object-cover w-full h-full rounded-full"
+    title="Barkat Ullah"
+  />
+</div>
+
       </motion.div>
       <motion.div
         className=""
